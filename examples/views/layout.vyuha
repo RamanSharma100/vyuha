@@ -9,10 +9,17 @@
 
 <body>
     <h1>
-        Welcome to Vyuha!, {{name}}
+        Welcome to Vyuha!, {{name | capitalize}}
     </h1>
     @block body @endblock
     <h1>This is Awesome</h1>
+    <a href="/about">
+        {{
+        "About"+ " " + "Us"
+        | uppercase
+        }}
+
+    </a>
 </body>
 
 </html>
