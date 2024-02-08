@@ -1,1 +1,1 @@
-export * from './Forma';
+export * from './Vyuha';

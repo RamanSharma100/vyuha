@@ -1,5 +1,5 @@
-import type { TemplateData } from '../types/index.d.ts';
-class Forma {
+import type { TemplateData } from '../types/index';
+class Vyuha {
 	private template: string;
 	private readonly BLOCK_REGEX = /@block\s+(\w+)\s*(.*?)\s*@endblock/gs;
 
@@ -38,4 +38,4 @@ class Forma {
 	};
 }
 
-export default Forma;
+export default Vyuha;

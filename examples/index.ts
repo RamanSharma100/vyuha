@@ -1,4 +1,4 @@
-import Forma from '../src/Forma';
+import Vyuha from '../src/Vyuha';
 
 const html = `
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ const html = `
 </html>
 `;
 
-const template = new Forma(html);
+const template = new Vyuha(html);
 
 const rendered = template.render({
 	title: 'Hello World',
