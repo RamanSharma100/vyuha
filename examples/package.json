@@ -2,10 +2,13 @@
   "name": "examples",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "server.ts",
   "type": "module",
   "scripts": {
-    "dev": "node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm index.ts "
+    "template": "node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm index.ts ",
+    "dev:express": "cross-env NODE_ENV=development nodemon -x node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm server.ts --signal SIGKILL --ignore node_modules",
+    "build": "tsc",
+    "start": "node --es-module-specifier-resolution=node --loader ts-node/esm ./build/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,7 @@
     "@swc/core": "^1.4.0",
     "@swc/wasm": "^1.4.0",
     "@types/express": "^4.17.21",
+    "cross-env": "^7.0.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },

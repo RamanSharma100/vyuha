@@ -1,4 +1,4 @@
-import Vyuha from '../src/Vyuha';
+import { Vyuha } from '../src';
 
 const baseTemplate = `
 <!DOCTYPE html>
