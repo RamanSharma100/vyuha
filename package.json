@@ -7,8 +7,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "tsup",
-    "dev": "node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm examples/index.ts "
+    "build": "tsup"
   },
   "files": [
     "dist/**/*",
