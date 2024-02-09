@@ -57,26 +57,6 @@ class Vyuha {
 			);
 		}
 
-		// if (data) {
-		// 	const pipeLines = new PipeLines();
-		// 	if (pipeLines.checkPipeExists(result)) {
-		// 		result = pipeLines.pipeLine(result, data);
-		// 	}
-		// 	const findMatches = result.match(/{{\s*(.*?)\s*}}/g);
-		// 	if (findMatches) {
-		// 		findMatches.forEach(match => {
-		// 			const key = match.replace(/{{\s*|\s*}}/g, '');
-		// 			if (!data[key]) {
-		// 				throw new ReferenceError(`${key} is not defined`);
-		// 			}
-		// 		});
-		// 	}
-		// 	for (const [key, value] of Object.entries(data)) {
-		// 		const regex = new RegExp(`{{\\s*${key}\\s*}}`, 'g');
-		// 		result = result.replace(regex, String(value));
-		// 	}
-		// }
-
 		result = result.replace(
 			/{{\s*([^|{}]+?)\s*(?:\|\s*([^{}]+?)\s*)?}}/g,
 			(_: string, expression: string, pipeline?: string) => {
