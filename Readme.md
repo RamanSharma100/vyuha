@@ -1,6 +1,6 @@
 # Vyuha (व्यूह)
 
-A Node.js Template Engine inspired by EJS and Angular.
+A Node.js Template Engine inspired by EJS, Angular and Laravel Blade.
 
 ## Installation
 
@@ -36,7 +36,7 @@ pnpm add vyuha
 
 ## Supported Control Flow
 
-- Extend Layouts with `@extend`
+- Extend Layouts with `@extends`
 - Create Blocks with `@block`
 - Start with `@<controlName>` and end with `@end<controlName>`
 - More to come, stay tuned!
@@ -135,9 +135,13 @@ app.listen(3000, () => {
 
 ```html
 <!-- index.vyuha -->
-@extend('layout') @block('title')
+@extends "layout"
+
+@block title
 <h1>{{ title }}</h1>
-@endblock @block('content')
+@endblock
+
+@block content
 <p>{{ description }}</p>
 @endblock
 ```
@@ -160,23 +164,26 @@ app.listen(3000, () => {
         <li><a href="/about">About</a></li>
       </ul>
     </nav>
-  @block('content')
+  @block content
   @endblock
 </body>
 ```
 
 ### Pipes
 
-```html
+```vyuha
 <!-- index.vyuha -->
-@extend('layout') @block('title')
+@extend "layout"
+
+@block title
 <h1>{{ title }}</h1>
-@endblock @block('content')
+@endblock
+
+@block content
 <h1>{{ title | uppercase }}</h1>
 <!-- HELLO, WORLD! -->
 <p>{{ description | lowercase }}</p>
 <!-- this is a simple example of vyuha. -->
-
 @endblock
 ```
 
@@ -240,10 +247,11 @@ MIT
 
 Contributions are welcome! Feel free to open an issue or a pull request.
 
-## Acknowledgements
+## Inspiration
 
 - [EJS](https://ejs.co/)
 - [Angular](https://angular.io/)
+- [Laravel Blade](https://laravel.com/docs/10.x/blade)
 
 ## Support
 

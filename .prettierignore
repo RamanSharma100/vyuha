@@ -4,6 +4,8 @@
 # Ignoring Build folder
 build
 
+README.md
+
 # Logs
 logs
 *.log
