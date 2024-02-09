@@ -4,13 +4,20 @@ A Node.js Template Engine inspired by EJS and Angular.
 
 ## Installation
 
+### NPM
+
 ```bash
 npm install vyuha
 ```
 
+### Yarn
+
 ```bash
 yarn add vyuha
+
 ```
+
+### PNPM
 
 ```bash
 pnpm add vyuha
