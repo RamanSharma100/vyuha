@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 
-import VyuhaEngine from '../src';
+import VyuhaEngine from '../../src';
 
 const app = express();
 

@@ -1,4 +1,4 @@
-const { Vyuha } = require('../../dist/index.cjs');
+const { Vyuha } = require('vyuha');
 
 const baseTemplate = `
 <!DOCTYPE html>

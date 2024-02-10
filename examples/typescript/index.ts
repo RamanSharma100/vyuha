@@ -1,4 +1,4 @@
-import { Vyuha } from '../../dist';
+import { Vyuha } from 'vyuha';
 
 const baseTemplate = `
 <!DOCTYPE html>
