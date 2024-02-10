@@ -53,7 +53,7 @@ pnpm add vyuha
 ### CommonJS (Javascript)
 
 ```javascript
-const Vyuha = require('vyuha');
+const {Vyuha} = require('vyuha');
 
 const template = `
   <h1>{{ title | uppercase }}</h1>
@@ -173,7 +173,7 @@ app.listen(3000, () => {
 
 ```html
 <!-- index.vyuha -->
-@extend "layout"
+@extends "layout"
 
 @block title
 <h1>{{ title }}</h1>
@@ -213,7 +213,7 @@ const data = {
 };
 
 const template = new Vyuha(template);
-const compiled = template.compile(data);
+const compiled = template.render(data);
 
 console.log(compiled);
 ```
