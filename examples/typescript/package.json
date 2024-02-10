@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "vyuha": "^0.1.2"
+    "vyuha": "^0.1.3"
   }
 }
