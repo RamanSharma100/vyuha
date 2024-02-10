@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <h1>
+        Welcome to Vyuha!, {{name | capitalize}}
+    </h1>
+    @block body @endblock
+    <h1>This is Awesome</h1>
+    <a href="/about">
+        {{
+        "About"+ " " + "Us"
+        | uppercase
+        }}
+
+    </a>
+</body>
+
+</html>
