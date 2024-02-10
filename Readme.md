@@ -171,7 +171,7 @@ app.listen(3000, () => {
 
 ### Pipes
 
-```vyuha
+```html
 <!-- index.vyuha -->
 @extend "layout"
 
@@ -189,8 +189,6 @@ app.listen(3000, () => {
 
 ## Important
 
-- You should never give end-users unfettered access to the EJS render method, If
-  you do so you are using EJS in an inherently un-secure way.
 - This is a work in progress, expect breaking changes.
 - Please report any issues you find.
 
@@ -222,7 +220,7 @@ console.log(compiled);
 
 ### Output
 
-```bash
+```html
 <h1>HELLO, WORLD!</h1>
 <p>This is a simple example of Vyuha.</p>
 ```
@@ -264,17 +262,17 @@ If you like this project, consider supporting it by starring the repository.
 
 ## Changelog
 
-- 0.0.1 - Initial Release (Not Published)
+- 0.1.0 - Initial Release (Beta)
 
 ## Roadmap
 
-- 0.0.1 - Publish to NPM
-- 0.1.0 - Add All Basic Control Flow
-- 0.2.0 - Add All Basic Pipes
-- 1.0.0 - Add Cache Support
-- 1.1.0 - Add CLI Support
-- 1.2.0 - Add Syntax Highlighting for VSCode
-- 1.3.0 - Add CDN Support
-- 1.4.0 - Add Standalone Vyuha.js file
+- 0.2.0 - Add All Basic Control Flow
+- 0.3.0 - Add All Basic Pipes
+- 0.4.0 - Add Cache Support
+- 0.5.0 - Add CLI Support
+- 0.6.0 - Add Syntax Highlighting for VSCode
+- 0.7.0 - Add CDN Support
+- 0.8.0 - Add Standalone Vyuha.js file
+- 1.0.0 - Stable Release
 
 # Enjoy Vyuha!
