@@ -173,7 +173,7 @@ app.listen(3000, () => {
 
 ```html
 <!-- index.vyuha -->
-@extend "layout"
+@extends "layout"
 
 @block title
 <h1>{{ title }}</h1>
@@ -213,7 +213,7 @@ const data = {
 };
 
 const template = new Vyuha(template);
-const compiled = template.compile(data);
+const compiled = template.render(data);
 
 console.log(compiled);
 ```
