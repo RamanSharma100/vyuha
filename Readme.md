@@ -53,7 +53,7 @@ pnpm add vyuha
 ### CommonJS (Javascript)
 
 ```javascript
-const Vyuha = require('vyuha');
+const Vyuha = require('vyuha/dist/index.cjs');
 
 const template = `
   <h1>{{ title | uppercase }}</h1>
@@ -263,6 +263,7 @@ If you like this project, consider supporting it by starring the repository.
 ## Changelog
 
 - 0.1.0 - Initial Release (Beta)
+- 0.1.1 - Typo Fixes in Readme (commonjs)
 
 ## Roadmap
 

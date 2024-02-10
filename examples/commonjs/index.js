@@ -1,4 +1,4 @@
-import { Vyuha } from '../src';
+const { Vyuha } = require('../../dist/index.cjs');
 
 const baseTemplate = `
 <!DOCTYPE html>
