@@ -1,11 +1,13 @@
 import type { TemplateData } from '../types/index';
 
 import PipeLines from './Pipelines';
+import ControlFlow from './ControlFlow';
 class Vyuha {
 	private template: string;
 	private baseTemplate?: string | null;
 	private readonly BLOCK_REGEX = /@block\s+(\w+)\s*(.*?)\s*@endblock/gs;
 	private readonly EXTENDS_REGEX = /@extends\s+"(.*?)"/;
+	private readonly controlFlow = new ControlFlow();
 
 	constructor(template: string, baseTemplate?: string | null) {
 		this.template = template;
@@ -87,7 +89,9 @@ class Vyuha {
 			}
 		);
 
-		return result.trim();
+		result = this.controlFlow.parseFlow(result, data);
+
+		return result?.trim();
 	};
 
 	private mergeTemplates = (

@@ -38,6 +38,9 @@ pnpm add vyuha
 
 - Extend Layouts with `@extends`
 - Create Blocks with `@block`
+- @if, @else and end with @endif
+- @if `{{ <expression> }}` or  @if `( <expression> )` and end with @endif
+- @switch, @case, @default and end with @endswitch
 - Start with `@<controlName>` and end with `@end<controlName>`
 - More to come, stay tuned!
 
@@ -168,6 +171,61 @@ app.listen(3000, () => {
   @endblock
 </body>
 ```
+
+## @if and @switch Control Flow
+
+```html
+<!-- index.vyuha -->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                {{ title }}
+            </title>
+        </head>
+        <body>
+            <h1>Hello, {{ name }}</h1>
+            
+            @if (test) then
+                <h2>Test is test true</h2>
+            @endif
+
+            @if {{false}} then
+                <h2>Test is true 1</h2>
+            @else
+                <h2>Test is false</h2>
+            @endif
+
+            @if {{name}} then
+                <h2>Test is true</h2>
+            @else
+                <h2>Test is false</h2>
+            @endif
+
+            @switch {{name}} then
+
+            @case "Raman Sharma"
+                <h2>Test is true 1</h2>
+
+            @default
+                <h2>Test is false</h2>
+            @endswitch
+
+
+            @switch (test) then
+
+            @case "Raman Sharma"
+                <h2>Test is true 2</h2>
+            @case false
+                <h2>Test is true 3</h2>
+            @default
+                <h2>Test is false</h2>
+            @endswitch
+        </body>
+    </html>
+```
+
+
 
 ### Pipes
 

@@ -1,7 +1,7 @@
 {
   "name": "vyuha",
   "version": "0.1.3",
-  "description": "A Template Engine for Node.js",
+  "description": "A Template Engine for Node.js inspired by Laravel Blade, EJS and Angular",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
